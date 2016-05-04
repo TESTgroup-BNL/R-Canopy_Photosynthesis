@@ -4,7 +4,7 @@ Title: Canopy photosynthesis testbed
 Version: 1.0
 Date: 2016-05-04
 Author: Jin Wu, Shawn Serbin
-Maintainer: Shawn Serbin <sserbin@bnl.gov>
+Maintainer: Jin Wu <jinwu@bnl.gov>, Shawn Serbin <sserbin@bnl.gov>
 Description: Testbed for canopy scaling and modeling of Photosynthesis and GPP
 Depends:
     XML
