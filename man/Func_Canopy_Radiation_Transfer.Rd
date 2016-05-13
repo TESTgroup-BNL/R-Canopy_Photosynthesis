@@ -23,7 +23,7 @@ Func_Canopy_Radiation_Transfer(FLAG, SZA, LAI, Ib0, Id0, Vcmax0_25, CI)
 \item{CI}{Clumping inedx; 0.63 for tropical evergreen forests (Chen et al, 2005)}
 }
 \value{
-List containing: Lsun - Sunlit LAI; Lshade - Shade LAI; Ic - Canopy total absorbed irradiance;
+List containing: PAR0 - ; Ib0 - ; Id0 - ; Lsun - Sunlit LAI; Lshade - Shade LAI; Ic - Canopy total absorbed irradiance;
 Isun - Sunlit leaf absorbed irradiance; Ishade - Shade leaf absorbed irradiance; Vc - Canopy total Vcmax;
 Vcsun - Sunlit leaf Vcmax; Vcshade - Shade leaf Vcmax
 }
