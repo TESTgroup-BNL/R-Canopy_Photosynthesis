@@ -9,14 +9,16 @@ Func_Func_Light_Partitioning(SZA, P, PAR)
 \arguments{
 \item{SZA}{solar zenith angle, in degrees}
 
-\item{P}{air pressure in ??}
+\item{P}{Atmospheric Pressure, in pa}
 
-\item{PAR}{measured total PAR?}
+\item{PAR}{measured total PAR?  umol/m2/s}
 }
 \value{
-List containing: SZA - solar zenith angle, PAR - PAR, SV - 
-
- @references Weiss and Norman, 1985
+List containing: SZA - solar zenith angle, PAR - PAR, SV - total Visible light, 
+SN - total NIR light, Ratio - the ratio between total measured light and total modeled light, 
+fV - fraction of visble direct beam, fN - fraction of NIR direct beam, 
+Model_DV - direct visible light, Model_dV - diffuse visible light, Model_DN - direct NIR light, 
+Model_dN - diffuse NIR light
 }
 \description{
 Function to partitioning incident radiatoin into direct and diffuse radiation, 
@@ -29,5 +31,8 @@ Weiss and Norman, 1985 light partitioning approach
 Jin Wu
 
 Shawn Serbin
+}
+\references{
+Weiss and Norman, 1985
 }
 
