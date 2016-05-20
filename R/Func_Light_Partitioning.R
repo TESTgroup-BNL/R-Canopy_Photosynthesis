@@ -24,7 +24,7 @@
 ##' @author Jin Wu
 ##' @author Shawn Serbin
 ##' 
-Func_Func_Light_Partitioning <- function(SZA, P, PAR){
+Func_Light_Partitioning <- function(SZA, P, PAR){
   
   RT <- PAR*0.219/(0.46)
   

@@ -30,9 +30,7 @@
 ##' @author Shawn Serbin
 
 Func_Canopy_Radiation_Transfer <- function(FLAG, SZA, LAI, Ib0, Id0, Vcmax0_25, CI){
-  print("in development")
-  #pi <- 3.1415926 # nescessary? can also just do pi
-  
+
   ## 1 Sun/shade LAI paritioning
   G <- 0.5 # the parameter used in Depury and Farquhar's model
   kb <- G/cos(SZA/180*pi) # extinction coefficient; G refers to G function, could be 0.5 to simplify it
@@ -42,9 +40,10 @@ Func_Canopy_Radiation_Transfer <- function(FLAG, SZA, LAI, Ib0, Id0, Vcmax0_25, 
   ## 2 Total irradiance absorbed by the canopy (Eq. 13; dePury and Farquhar, 1997) -TODO: enable the updadte of the reflectance coefficients
   rocb <- 0.029 # canopy reflection coefficient for beam PAR; assuming it is the same as for diffuse PAR; 0.036 is apparently too low
   rocd <- 0.036 # canopy reflection coefficient for diffuse PAR; assuming it is the same as for beam PAR; 0.036 is apparently too low
-  kb1 <- 0.46/cos(SZA/(180*pi)) # beam and scattered beam PAR extinction coefficient
+  kb1 <- 0.46/cos(SZA/180*pi) # beam and scattered beam PAR extinction coefficient
   kd1 <- 0.719 # diffuse and scattered diffuse PAR exintinction coefficient
   Ic <- (1-rocb)*Ib0*(1-exp(-kb1*LAI*CI))+(1-rocd)*Id0*(1-exp(-kd1*LAI*CI)) # canopy-scale irradiance absorbed
+  Ic <- (1-rocb)*Ib0*(1-exp(-kb1*LAI*CI))+(1-rocd)*Id0*(1-exp(-kd1*LAI*CI))
   
   ## 3 Calculating sunlit leave irradiance
   sigma <- 0.15 # leaf scattering coefficient of pAR, ro1+tao1; where ro1=0.1 for leaf reflection; tao1=0.05 for leaf transmissivity
@@ -60,14 +59,14 @@ Func_Canopy_Radiation_Transfer <- function(FLAG, SZA, LAI, Ib0, Id0, Vcmax0_25, 
   if (FLAG==0) {
     # updated relationship based on the Lloyd et al. 2010, cieted by Bonan et al. 2014
     kn <- exp(0.00963*Vcmax0_25-2.43)
-    Vcsun <- CI*Vcmax0_25/((kn+kb*CI)*(1-exp(-(kb*CI+kn)*LAI))) # sunlit leaves Vcmax
+    Vcsun <- CI*Vcmax0_25/(kn+kb.*CI)*(1-exp(-(kb*CI+kn)*LAI)) # sunlit leaves Vcmax
     Vc <- Vcmax0_25/kn*(1-exp(-kn*LAI)) # canopy scale vcmax
     Vcshade <- Vc-Vcsun
   } else {
     # updated relationship based on the Mercado et al. 2006
     kn <- 0.1823
-    Vcsun <- CI*Vcmax0_25/((kn+kb*CI)*(1-exp(-(kb*CI+kn)*LAI))) # sunlit leaves Vcmax
-    Vc <- Vcmax0_25/(kn*(1-exp(-kn*LAI))) # canopy scale vcmax
+    Vcsun <- CI*Vcmax0_25/(kn+kb*CI)*(1-exp(-(kb*CI+kn)*LAI)) # sunlit leaves Vcmax
+    Vc <- Vcmax0_25/kn*(1-exp(-kn*LAI)) # canopy scale vcmax
     Vcshade <- Vc-Vcsun 
   }
 
