@@ -28,7 +28,7 @@
 ##' @export
 ##' @author Jin Wu
 ##' @author Shawn Serbin
-
+##'
 Func_Canopy_Radiation_Transfer <- function(FLAG, SZA, LAI, Ib0, Id0, Vcmax0_25, CI){
 
   ## 1 Sun/shade LAI paritioning

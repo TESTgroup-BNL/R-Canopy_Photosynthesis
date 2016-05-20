@@ -2,4 +2,7 @@
 
 export(Func_Canopy_Radiation_Transfer)
 export(Func_Light_Partitioning)
+export(Func_Temperature_Bernacchi)
+export(Func_Temperature_June)
+export(Func_Temperature_Response)
 export(model.options)
