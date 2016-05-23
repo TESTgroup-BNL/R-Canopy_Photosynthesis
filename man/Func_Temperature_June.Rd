@@ -4,14 +4,14 @@
 \alias{Func_Temperature_June}
 \title{Func_Temperature_June}
 \usage{
-Func_Temperature_June(P25, Topt, T)
+Func_Temperature_June(P25, Topt, Tleaf)
 }
 \arguments{
 \item{P25}{Vcmax/Jmax at 25 degrees C}
 
 \item{Topt}{Temperature optimum of Vcmax/Jmax}
 
-\item{T}{leaf temperature in degrees C}
+\item{Tleaf}{leaf temperature in degrees C}
 }
 \description{
 June temperature response function for photosynthesis parameters
