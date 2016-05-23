@@ -26,7 +26,24 @@ Func_Leaf_FvCB_Photosynthesis_Model(Vcmax25, Jmax25, Tleaf, Topt, I, Ci, Press,
 
 \item{Phi_in}{Input curvature factor for light response function}
 }
+\value{
+List containing: Anet - Net photosynthetic rate (Agross-Rd,umol/m2/s) at leaf temperature, 
+Agross - Gross photosynthetic rate (umol/m2/s) at leaf temperature, Rd - Leaf respiration rate (umol/m2/s) at leaf temperature, 
+Wc - Rubisco limited photosynthetic rate (umol/m2/s), Wj - RuBP limited photosynthetic rate (umol/m2/s),
+Wp - TPU limited photosynthetic rate (0.5*Vcmax, umol/m2/s), Vcmax - Maximum rate of RuBP carboxylation (umol/m2/s) 
+at leaf temperature, Jmax - Maximum rate of electron transport (umol/m2/s) at leaf temperature,
+Vo - , Vomax - Maximum rate of oxygen evolution (umol/m2/s) at leaf temperature, Gamma* - at leaf temperature,
+Kc - , Ko - , PSII - , Phi - at leaf temperature
+}
 \description{
 Leaf level FvCB Photosynthesis model (Farquhar et al. 1980)
+}
+\author{
+Jin Wu
+
+Shawn Serbin
+}
+\references{
+Long and Bernacchi, 2003; Medlyn et al., 2002; Bernacchi et al., 2013
 }
 

@@ -4,12 +4,12 @@
 \alias{Func_Temperature_Response}
 \title{Func_Temperature_Response}
 \usage{
-Func_Temperature_Response(V25, J25, T, Topt, Press)
+Func_Temperature_Response(V25, J25, Tleaf, Topt, Press)
 }
 \arguments{
 \item{J25}{Jmax at 25 degrees C}
 
-\item{T}{leaf temperature in degrees C}
+\item{Tleaf}{leaf temperature in degrees C}
 
 \item{Topt}{Temperature optimum of Vcmax/Jmax}
 
@@ -19,7 +19,7 @@ Func_Temperature_Response(V25, J25, T, Topt, Press)
 }
 \value{
 List containing: Vcmax - Vcmax at leaf temperature, Jmax - Jmax at leaf temperature,
-Tau_star - Tau* at leaf temperature, Kc - Kc MM constant at leaf temperature, Ko - Ko MM constant at leaf temperature,
+Gamma_star - Gamma* at leaf temperature, Kc - Kc MM constant at leaf temperature, Ko - Ko MM constant at leaf temperature,
 PSII - PSII at leaf temperature, Phi - Phi at leaf temperature, Rd - leaf respiration at leaf temperature,
 Vomax - Vomax (max oxygen evolution) at leaf temperature
 }

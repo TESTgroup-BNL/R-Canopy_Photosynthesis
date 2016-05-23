@@ -4,14 +4,14 @@
 \alias{Func_Temperature_Bernacchi}
 \title{Func_Temperature_Bernacchi}
 \usage{
-Func_Temperature_Bernacchi(delta_H, c, T)
+Func_Temperature_Bernacchi(delta_H, c, Tleaf)
 }
 \arguments{
 \item{delta_H}{Activation energy}
 
 \item{c}{Scaling constant}
 
-\item{T}{leaf temperature in degrees C}
+\item{Tleaf}{leaf temperature in degrees C}
 }
 \value{
 temperature scale factor
@@ -26,5 +26,8 @@ Bernacchi temperature response function for photosynthesis parameters
 Jin Wu
 
 Shawn Serbin
+}
+\references{
+Bernacchi et al., 2002
 }
 
