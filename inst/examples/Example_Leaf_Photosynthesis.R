@@ -17,6 +17,7 @@ rm(list=ls(all=TRUE))   # clear workspace
 graphics.off()          # close any open graphics
 closeAllConnections()   # close any open connections to files
 
+## Load library
 library(CanopyPhotosynthesis)
 #--------------------------------------------------------------------------------------------------#
 
@@ -34,13 +35,14 @@ Press <- 10^5
 PII_in <- 0.8  # shouldn't this be PSII_in??
 Phi_in <- 0.75
 
+# quick test
 FvCB <- Func_Leaf_FvCB_Photosynthesis_Model(V25, J25, Tleaf, Topt, PAR, Ci, Press, PII_in, Phi_in)
 
 #--------------------------------------------------------------------------------------------------#
 
 
 #--------------------------------------------------------------------------------------------------#
-## Quick test of photo to light
+## Test of the response of photosynthesis to light
 
 PAR0 <- seq(10,2000,10)
 Vc <- seq(100,10,-10)
@@ -57,6 +59,7 @@ for (i in 1:length(PAR0)) {
 
 
 # Plot results
+dev.new()
 matplot(PAR0,An, type="l",xlab="PAR (umols/m2/s)")
 box(lwd=2.2)
 #--------------------------------------------------------------------------------------------------#
@@ -88,6 +91,7 @@ for (i in 1:length(Tl)){
   Ko[i] <- FvCB$Ko
 }
 
+dev.new()
 cexaxis <- 1.5
 cexlab <- 1.5
 par(mfrow=c(2,4),mar=c(4.1,5.4,0.4,0.4), oma=c(0.1,0.6,0.1,0.1))
