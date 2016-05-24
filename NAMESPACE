@@ -3,6 +3,7 @@
 export(Func_Canopy_Radiation_Transfer)
 export(Func_Leaf_FvCB_Photosynthesis_Model)
 export(Func_Light_Partitioning)
+export(Func_Multi_Layer_Photosynthesis_Model)
 export(Func_Temperature_Bernacchi)
 export(Func_Temperature_June)
 export(Func_Temperature_Medlyn)

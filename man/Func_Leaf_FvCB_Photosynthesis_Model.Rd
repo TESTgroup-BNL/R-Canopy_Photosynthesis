@@ -12,7 +12,7 @@ Func_Leaf_FvCB_Photosynthesis_Model(Vcmax25, Jmax25, Tleaf, Topt, I, Ci, Press,
 
 \item{Jmax25}{Jmax at 25 degrees C}
 
-\item{Tleaf}{Leaf temperature}
+\item{Tleaf}{Leaf temperature in degrees C}
 
 \item{Topt}{Temperature optimum for Jmax}
 
@@ -41,7 +41,7 @@ Leaf level FvCB Photosynthesis model (Farquhar et al. 1980)
 \examples{
 \dontrun{
 # Run test leaf photosynthesis simulations
-file <- system.file("examples/Example_Leaf_Photosynthesis.R",package="CanopyPhotosynthesis")
+file <- system.file('examples/Example_Leaf_Photosynthesis.R',package='CanopyPhotosynthesis')
 source(file)
 
 }

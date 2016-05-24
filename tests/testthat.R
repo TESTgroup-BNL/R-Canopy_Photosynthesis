@@ -4,4 +4,4 @@ library(testthat)
 library(CanopyPhotosynthesis)
 
 test_check("CanopyPhotosynthesis")
-#test_package("CanopyPhotosynthesis")
+# test_package('CanopyPhotosynthesis')

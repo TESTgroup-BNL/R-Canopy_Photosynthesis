@@ -21,12 +21,12 @@
 ##'
 ##' @author Jin Wu, Shawn P. Serbin
 ##'
-model.options <- function(input.file=NULL){
+model.options <- function(input.file = NULL) {
   model.options.xml <- NULL
   
   ### Parse input settings file
   if (!is.null(input.file) && file.exists(input.file)) {
-    model.options.xml <- xmlParse(input.file)  
+    model.options.xml <- xmlParse(input.file)
     # convert the xml to a list
     settings.list <- xmlToList(model.options.xml)
     
@@ -40,11 +40,10 @@ model.options <- function(input.file=NULL){
   }
   
   ### Remove comment or NULL fields
-  model.options.list <- model.options.list[model.options.list !="NULL" ]
+  model.options.list <- model.options.list[model.options.list != "NULL"]
   
-  # Return settings file as a list
-  #invisible(settings.list) # invisible option
+  # Return settings file as a list invisible(settings.list) # invisible option
   return(model.options.list)
   
-} ### End of function
+}  ### End of function
 #--------------------------------------------------------------------------------------------------#
