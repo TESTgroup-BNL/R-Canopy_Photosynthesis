@@ -38,6 +38,15 @@ Kc - , Ko - , PSII - , Phi - at leaf temperature
 \description{
 Leaf level FvCB Photosynthesis model (Farquhar et al. 1980)
 }
+\examples{
+\dontrun{
+# Run test leaf photosynthesis simulations
+file <- system.file("examples/Example_Leaf_Photosynthesis.R",package="CanopyPhotosynthesis")
+source(file)
+
+}
+
+}
 \author{
 Jin Wu
 

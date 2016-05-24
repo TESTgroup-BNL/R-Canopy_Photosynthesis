@@ -22,6 +22,14 @@
 ##' Vo - , Vomax - Maximum rate of oxygen evolution (umol/m2/s) at leaf temperature, Gamma* - at leaf temperature,
 ##' Kc - , Ko - , PSII - , Phi - at leaf temperature
 ##' 
+##' @examples
+##' \dontrun{
+##' # Run test leaf photosynthesis simulations
+##' file <- system.file("examples/Example_Leaf_Photosynthesis.R",package="CanopyPhotosynthesis")
+##' source(file)
+##' 
+##' }
+##' 
 ##' @references Long and Bernacchi, 2003; Medlyn et al., 2002; Bernacchi et al., 2013
 ##' 
 ##' @export
