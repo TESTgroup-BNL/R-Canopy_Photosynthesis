@@ -24,5 +24,14 @@ If you want a specific branch, do `install_github(..., ref="<branch>")`.
 
 From there, you should be able to load the package in your typical R session.
 
+## Quick example runs (after installation)
+```R
+# Leaf level responses to light and temperature
+file <- system.file("examples/Example_Leaf_Photosynthesis.R",package="CanopyPhotosynthesis")
+source(file)
+# This should generate two plots, one showing the An vs PAR and the second showing the temperature sensitivities of photosynthesis and key parameters such as Vcmax, Jmax, and Rd
+
+```
+
 
 For more information, see the vignette (`vignettes/pecanrtm.vignettes.Rmd`). [UNDER DEVELOPMENT]
