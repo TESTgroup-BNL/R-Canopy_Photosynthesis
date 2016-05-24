@@ -15,8 +15,9 @@ jinwu@bnl.gov;  sserbin@bnl.gov
 Easiest way to install is via `install_github` from the `devtools` package.
 
 ```R
-library(devtools)
-install_github("TEST-BNL/R-Canopy_Photosynthesis")
+install.packages('devtools') # if you haven't already installed this package and dependencies
+library(devtools) # load the library
+install_github("TEST-BNL/R-Canopy_Photosynthesis") # install the package from GitHub
 ```
 
 If you want a specific branch, do `install_github(..., ref="<branch>")`.
