@@ -32,6 +32,17 @@
 ##' @author Jin Wu
 ##' @author Shawn Serbin
 ##' 
+
+## FOR DEBUGGING
+FLAG <- 1
+SZA <- 30
+Press <- 10^5
+LAI <- 6
+PAR0 <- 1320
+Vcmax0_25 <- 40
+Nlayers <- 20
+CI <- 0.63
+
 Func_Multi_Layer_Photosynthesis_Model <- function(FLAG, SZA, Press, PAR0, LAI, Tleaf, 
   Tleaf_diff, ambCO2, Vcmax0_25, CI, Topt, Nlayers, Phi_sun, PSII_sun, Phi_shade, 
   PSII_shade, sf_sun, sf_shade, sf) {
@@ -49,12 +60,32 @@ Func_Multi_Layer_Photosynthesis_Model <- function(FLAG, SZA, Press, PAR0, LAI, T
   # Calc LAI by layer
   LAIi <- 1:Nlayers/Nlayers * LAI
   
-  # Calculate the average Vcmax within each layer of the canopy
-  for (i in 1:Nlayers) {
-    canopy_rt <- Func_Canopy_Radiation_Transfer(FLAG, SZA, LAIi, LQ$Model_DV, 
-      LQ$Model_dV, Vcmax0_25, CI)
+  # Calculate canopy fractions
+  canopy_frac <- Func_Canopy_Radiation_Transfer(FLAG, SZA, LAIi, LQ$Model_DV, 
+                                                   LQ$Model_dV, Vcmax0_25, CI)
+  
+  # Calculate the average Vcmax within each layer of the canopy !! TRYING TO ELIMINATE LOOP
+  #for (i in 1:Nlayers) {
+   # canopy_rt <- Func_Canopy_Radiation_Transfer(FLAG, SZA, LAIi[i], LQ$Model_DV, 
+  #    LQ$Model_dV, Vcmax0_25, CI)
+  #} # End of vert dist loop
+  
+  Vc <- (Vcmax0_25*exp(-kn*LAIi)+Vcmax0_25*exp(-kn*((i-1)/Nlayers*LAI)))/2
+  
+  if (FLAG == 0) {
     
-  } # End of vert dist loop
+    ## STILL TRYING TO UNDERSTAND WHY THESE ARE DIFFERENT?
+  } else {
+    kn <- 0.1823
+    L <- LAIi[i]
+    Vc <- (Vcmax0_25*exp(-kn*L)+Vcmax0_25*exp(-kn*((i-1)/Nlayers*LAI)) )/2
+    Vc
+    
+    G <- 0.5  # the parameter used in Depury and Farquhar's model
+    kb <- G/cos(SZA/180 * pi)  # extinction coefficient; G refers to G function, could be 0.5 to simplify it
+    Vcsun <- CI * Vcmax0_25/(kn + kb * CI) * (1 - exp(-(kb * CI + kn) * L ))  # sunlit leaves Vcmax
+    Vc <- Vcmax0_25/kn * (1 - exp(-kn * L))  # canopy scale vcmax
+  }
   
   # return(LQ)
 }
