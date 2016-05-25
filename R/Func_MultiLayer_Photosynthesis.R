@@ -45,16 +45,16 @@ Func_Multi_Layer_Photosynthesis_Model <- function(FLAG, SZA, Press, PAR0, LAI, T
   
   ## Step 1--Calculate vertical distribution of LAI_sun/shade, PAR_sun/shade,
   ## Vcmax_sun/shade
+  
+  # Calc LAI by layer
+  LAIi <- 1:Nlayers/Nlayers * LAI
+  
+  # Calculate the average Vcmax within each layer of the canopy
   for (i in 1:Nlayers) {
-    # print(i)
-    LAIi <- i/Nlayers * LAI
-    # print(LAIi)
-    
     canopy_rt <- Func_Canopy_Radiation_Transfer(FLAG, SZA, LAIi, LQ$Model_DV, 
       LQ$Model_dV, Vcmax0_25, CI)
-    print(canopy_rt)
     
-  }
+  } # End of vert dist loop
   
   # return(LQ)
 }
