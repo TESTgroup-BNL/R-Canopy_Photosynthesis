@@ -22,4 +22,3 @@ model.options <- model.options('/home/$USER/model.options.xml')
 \author{
 Jin Wu, Shawn P. Serbin
 }
-

@@ -19,12 +19,11 @@ June temperature response function for photosynthesis parameters
 \details{
 June temperature response function for photosynthesis parameters
 }
+\references{
+Bernacchi et al. 2013 and June et al. 2004
+}
 \author{
 Jin Wu
 
 Shawn Serbin
 }
-\references{
-Bernacchi et al. 2013 and June et al. 2004
-}
-

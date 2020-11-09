@@ -25,12 +25,11 @@ Medlyn Arrhenius function
 Medlyn Arrhenius temperature response function for photosynthesis parameters, based
 on Bernacchi et al. 2002.  Used for Vcmax, Jmax, Rd, Kc, Ko, Gamma*
 }
+\references{
+Bernacchi et al., 2002; 2003; Medlyn et al., 2002
+}
 \author{
 Jin Wu
 
 Shawn Serbin
 }
-\references{
-Bernacchi et al., 2002; 2003; Medlyn et al., 2002
-}
-

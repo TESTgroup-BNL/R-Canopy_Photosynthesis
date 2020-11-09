@@ -53,12 +53,11 @@ Id0 <- LQ$Model_dV
 output <- Func_Canopy_Radiation_Transfer(FLAG=FLAG, SZA=SZA, LAI=LAI, Ib0=Ib0, Id0=Id0, Vcmax0_25=Vcmax0_25, CI=Clumping)
 
 }
+\references{
+dePury and Farquhar, 1997; Ryu et al., 2011
+}
 \author{
 Jin Wu
 
 Shawn Serbin
 }
-\references{
-dePury and Farquhar, 1997; Ryu et al., 2011
-}
-
