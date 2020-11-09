@@ -27,12 +27,11 @@ based on the Weiss and Norman, 1985 light partitioning approach
 \details{
 Weiss and Norman, 1985 light partitioning approach
 }
+\references{
+Weiss and Norman, 1985
+}
 \author{
 Jin Wu
 
 Shawn Serbin
 }
-\references{
-Weiss and Norman, 1985
-}
-

@@ -34,15 +34,18 @@
 ##' 
 
 ## FOR DEBUGGING
-FLAG <- 1
-SZA <- 30
-Press <- 10^5
-LAI <- 6
-PAR0 <- 1320
-Vcmax0_25 <- 40
-Nlayers <- 20
-CI <- 0.63
+#FLAG <- 1
+#SZA <- 30
+#Press <- 10^5
+#LAI <- 6
+#PAR0 <- 1320
+#Vcmax0_25 <- 40
+#Nlayers <- 20
+#CI <- 0.63
+#output <- Func_Multi_Layer_Photosynthesis_Model(FLAG=FLAG,SZA=SZA,Press=Press,LAI=LAI,
+#                                                PAR0=PAR0,)
 
+# FUNCTION UNFINISHED.  NEEDS TO MATCH THAT IN THE MATLAB VERSION
 Func_Multi_Layer_Photosynthesis_Model <- function(FLAG, SZA, Press, PAR0, LAI, Tleaf, 
   Tleaf_diff, ambCO2, Vcmax0_25, CI, Topt, Nlayers, Phi_sun, PSII_sun, Phi_shade, 
   PSII_shade, sf_sun, sf_shade, sf) {

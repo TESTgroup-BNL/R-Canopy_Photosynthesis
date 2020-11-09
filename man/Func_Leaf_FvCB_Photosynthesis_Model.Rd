@@ -4,8 +4,17 @@
 \alias{Func_Leaf_FvCB_Photosynthesis_Model}
 \title{Func_Leaf_FvCB_Photosynthesis_Model}
 \usage{
-Func_Leaf_FvCB_Photosynthesis_Model(Vcmax25, Jmax25, Tleaf, Topt, I, Ci, Press,
-  PSII_in, Phi_in)
+Func_Leaf_FvCB_Photosynthesis_Model(
+  Vcmax25,
+  Jmax25,
+  Tleaf,
+  Topt,
+  I,
+  Ci,
+  Press,
+  PSII_in,
+  Phi_in
+)
 }
 \arguments{
 \item{Vcmax25}{Vcmax at 25 degrees C}
@@ -47,12 +56,11 @@ source(file)
 }
 
 }
+\references{
+Long and Bernacchi, 2003; Medlyn et al., 2002; Bernacchi et al., 2013
+}
 \author{
 Jin Wu
 
 Shawn Serbin
 }
-\references{
-Long and Bernacchi, 2003; Medlyn et al., 2002; Bernacchi et al., 2013
-}
-

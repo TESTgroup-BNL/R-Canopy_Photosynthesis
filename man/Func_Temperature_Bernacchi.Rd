@@ -22,12 +22,11 @@ Bernacchi temperature response function for photosynthesis parameters
 \details{
 Bernacchi temperature response function for photosynthesis parameters
 }
+\references{
+Bernacchi et al., 2002
+}
 \author{
 Jin Wu
 
 Shawn Serbin
 }
-\references{
-Bernacchi et al., 2002
-}
-

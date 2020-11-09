@@ -29,12 +29,11 @@ Temperature response functions for scaling leaf-level photosynthesis parameters
 \details{
 Temperature response functions for scaling leaf-level photosynthesis parameters
 }
+\references{
+Bernacchi et al., 2002, 2003, 2013
+}
 \author{
 Jin Wu
 
 Shawn Serbin
 }
-\references{
-Bernacchi et al., 2002, 2003, 2013
-}
-
